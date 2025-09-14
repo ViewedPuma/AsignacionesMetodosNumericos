@@ -1,4 +1,4 @@
-﻿using AsignacionesMetodosNumericos.implementaciones;
+﻿using AsignacionesMetodosNumericos.Asignacion02TabulacionFunciones;
 
 namespace MetodosNumericos_test
 {

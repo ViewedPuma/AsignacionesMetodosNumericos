@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AsignacionesMetodosNumericos.Error_Absoluto
 {
-    public class ErrorAbsRel
+    public static class ErrorAbsRel
     {
         public static double ErrorAbsoluto(double valorReal, double valorAproximado)
         {
@@ -17,10 +12,9 @@ namespace AsignacionesMetodosNumericos.Error_Absoluto
         public static double ErrorRelativo(double errorAbsoluto, double valorReal)
         {
             if (valorReal == 0)
-                throw new ArgumentException("El valor relativo no puede ser 0");
+                throw new ArgumentException("El valor real no puede ser 0 para calcular el error relativo.");
 
-            return (errorAbsoluto / valorReal)*100;
+            return (errorAbsoluto / Math.Abs(valorReal)) * 100.0;
         }
-
     }
 }
