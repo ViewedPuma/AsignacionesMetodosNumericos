@@ -32,7 +32,7 @@ namespace AsignacionesMetodosNumericos
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             label1 = new Label();
             btnErrorAbsolutoRelativo = new Button();
-            button3 = new Button();
+            btnRaicesDeEcuaciones = new Button();
             button4 = new Button();
             button5 = new Button();
             button6 = new Button();
@@ -68,16 +68,16 @@ namespace AsignacionesMetodosNumericos
             btnErrorAbsolutoRelativo.UseVisualStyleBackColor = false;
             btnErrorAbsolutoRelativo.Click += btnErrorAbsolutoRelativo_Click;
             // 
-            // button3
+            // btnRaicesDeEcuaciones
             // 
-            button3.BackColor = Color.FromArgb(16, 48, 54);
-            button3.Enabled = false;
-            button3.Location = new Point(667, 245);
-            button3.Name = "button3";
-            button3.Size = new Size(207, 138);
-            button3.TabIndex = 3;
-            button3.Text = "Coming Soon";
-            button3.UseVisualStyleBackColor = false;
+            btnRaicesDeEcuaciones.BackColor = Color.FromArgb(16, 48, 54);
+            btnRaicesDeEcuaciones.Location = new Point(667, 245);
+            btnRaicesDeEcuaciones.Name = "btnRaicesDeEcuaciones";
+            btnRaicesDeEcuaciones.Size = new Size(207, 138);
+            btnRaicesDeEcuaciones.TabIndex = 3;
+            btnRaicesDeEcuaciones.Text = "Raices de Ecuaciones";
+            btnRaicesDeEcuaciones.UseVisualStyleBackColor = false;
+            btnRaicesDeEcuaciones.Click += button3_Click;
             // 
             // button4
             // 
@@ -195,7 +195,7 @@ namespace AsignacionesMetodosNumericos
             Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btnRaicesDeEcuaciones);
             Controls.Add(btnErrorAbsolutoRelativo);
             Controls.Add(label1);
             Controls.Add(label2);
@@ -228,7 +228,7 @@ namespace AsignacionesMetodosNumericos
         private Label label1;
         private Button btnAsignacion02;
         private Button btnErrorAbsolutoRelativo;
-        private Button button3;
+        private Button btnRaicesDeEcuaciones;
         private Button button4;
         private Button button5;
         private Button button6;

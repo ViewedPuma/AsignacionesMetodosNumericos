@@ -19,7 +19,7 @@ namespace AsignacionesMetodosNumericos
             // Carga la fuente una sola vez
             PrivateFontCollection fuentes = new PrivateFontCollection();
             fuentes.AddFontFile("Resources/fonts/ttf/Jaro-Regular.ttf");
-
+            Font fuenteNormal = new Font(fuentes.Families[0], 12);
             Font fuenteChica = new Font(fuentes.Families[0], 24);
             Font fuenteMediana = new Font(fuentes.Families[0], 48);
             Font fuenteGrande = new Font(fuentes.Families[0], 72);
@@ -27,7 +27,7 @@ namespace AsignacionesMetodosNumericos
 
 
             // Aplica estilos a todos los controles, incluyendo los anidados
-            ApplyStyles(control.Controls, fuenteChica, fuenteMediana, fuenteGrande);
+            ApplyStyles(control.Controls, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
 
 
         }
@@ -36,13 +36,16 @@ namespace AsignacionesMetodosNumericos
         {
             LoadDefaultStyles((Control)form);
         }
-        private static void ApplyStyles(Control.ControlCollection controls, Font fuenteChica, Font fuenteMediana, Font fuenteGrande)
+        private static void ApplyStyles(Control.ControlCollection controls,Font fuenteNormal, Font fuenteChica, Font fuenteMediana, Font fuenteGrande)
         {
             foreach (Control control in controls)
             {
                 if (control is Label label)
                 {
-                    label.Font = fuenteMediana;
+                    if (label.Tag != null && label.Tag.ToString() == "chico")
+                        label.Font = fuenteChica;
+                    else
+                        label.Font = fuenteMediana;
                     label.ForeColor = Color.White;
                     RedondearLabel(label, 20);
                 }
@@ -113,7 +116,7 @@ namespace AsignacionesMetodosNumericos
                 // Aplica estilos a controles hijos
                 if (control.HasChildren)
                 {
-                    ApplyStyles(control.Controls, fuenteChica, fuenteMediana, fuenteGrande);
+                    ApplyStyles(control.Controls,fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
                 }
             }
         }

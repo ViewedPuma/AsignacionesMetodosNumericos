@@ -73,7 +73,7 @@ namespace AsignacionesMetodosNumericos.Error_Absoluto
                 e.Handled = true;
             }
             // Permitir solo un punto decimal
-            if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
+            if (e.KeyChar == '.' && (sender as TextBox)?.Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
             }
@@ -84,13 +84,21 @@ namespace AsignacionesMetodosNumericos.Error_Absoluto
             if (double.TryParse(txtValorAproximado.Text, out double valorAproximado) &&
                 double.TryParse(txtValorReal.Text, out double valorReal))
             {
-                double errorAbs = ErrorAbsRel.ErrorAbsoluto( valorReal, valorAproximado);
+                double errorAbs = ErrorAbsRel.ErrorAbsoluto(valorReal, valorAproximado);
                 double errorRel = ErrorAbsRel.ErrorRelativo(errorAbs, valorReal);
 
                 lblErrorAbsoluto.Text = $"{errorAbs:F2}";
 
                 lblErrorRelativo.Text = $"{errorRel:F2} %";
             }
+        }
+
+        private void btnLimpiarErrores_Click(object sender, EventArgs e)
+        {
+            txtValorAproximado.Clear();
+            txtValorReal.Clear();
+            lblErrorAbsoluto.Text = "";
+            lblErrorRelativo.Text = "";
         }
     }
 }

@@ -87,5 +87,17 @@ namespace AsignacionesMetodosNumericos
             MostrarEnPanel(control);
             PanelContenedor.Visible = true;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var control = new RaicesFunciones.implementaciones.EntradaMetodosControl();
+            control.VolverClick += (s, e) =>
+            {
+                PanelContenedor.Controls.Clear();
+                PanelContenedor.Visible = false;
+            };
+            MostrarEnPanel(control);
+            PanelContenedor.Visible = true;
+        }
     }
 }

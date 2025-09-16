@@ -104,7 +104,7 @@
             lblNombreValorAproximado.AutoSize = true;
             lblNombreValorAproximado.Location = new Point(133, 203);
             lblNombreValorAproximado.Name = "lblNombreValorAproximado";
-            lblNombreValorAproximado.Size = new Size(104, 100);
+            lblNombreValorAproximado.Size = new Size(104, 15);
             lblNombreValorAproximado.TabIndex = 37;
             lblNombreValorAproximado.Text = " Valor Aproximado";
             lblNombreValorAproximado.Click += label1_Click;
@@ -114,7 +114,7 @@
             lblValorReal.AutoSize = true;
             lblValorReal.Location = new Point(715, 203);
             lblValorReal.Name = "lblValorReal";
-            lblValorReal.Size = new Size(61, 100);
+            lblValorReal.Size = new Size(61, 15);
             lblValorReal.TabIndex = 38;
             lblValorReal.Text = " Valor Real";
             lblValorReal.Click += label1_Click_1;
@@ -124,7 +124,7 @@
             lblValor1.AutoSize = true;
             lblValor1.Location = new Point(133, 377);
             lblValor1.Name = "lblValor1";
-            lblValor1.Size = new Size(86, 100);
+            lblValor1.Size = new Size(86, 15);
             lblValor1.TabIndex = 39;
             lblValor1.Text = "Error Absoluto:";
             lblValor1.Click += lblValor1_Click;
@@ -173,6 +173,7 @@
             btnLimpiarErrores.TabIndex = 44;
             btnLimpiarErrores.Text = "Limpiar";
             btnLimpiarErrores.UseVisualStyleBackColor = false;
+            btnLimpiarErrores.Click += btnLimpiarErrores_Click;
             // 
             // ErrorAbsRelControl
             // 
