@@ -176,6 +176,7 @@
             txtEjemplo.Size = new Size(483, 23);
             txtEjemplo.TabIndex = 66;
             txtEjemplo.Text = "Ejemplo: 4x^3 - 6x^2 + 7x - 2.3";
+            txtEjemplo.TextChanged += txtEjemplo_TextChanged;
             // 
             // MetodoBiseccionControl
             // 

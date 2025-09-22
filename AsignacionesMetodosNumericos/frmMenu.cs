@@ -99,5 +99,59 @@ namespace AsignacionesMetodosNumericos
             MostrarEnPanel(control);
             PanelContenedor.Visible = true;
         }
+
+        private void btnNewtonRaphson_Click(object sender, EventArgs e)
+        {
+            var control = new Newton_Raphson.NewtonRaphsonControl();
+            control.VolverClick += (s, e) =>
+            {
+                if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+                {
+                    PanelContenedor.Controls.Clear();
+                    PanelContenedor.Visible = false;
+                }
+            };
+            MostrarEnPanel(control);
+            if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+            {
+                PanelContenedor.Visible = true;
+            }
+        }
+
+        private void btnSecante_Click(object sender, EventArgs e)
+        {
+            var control = new Secante.SecanteControl();
+            control.VolverClick += (s, e) =>
+            {
+                if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+                {
+                    PanelContenedor.Controls.Clear();
+                    PanelContenedor.Visible = false;
+                }
+            };
+            MostrarEnPanel(control);
+            if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+            {
+                PanelContenedor.Visible = true;
+            }
+        }
+
+        private void btnTodosLosMetodos_Click(object sender, EventArgs e)
+        {
+            var control = new TodasLasFunciones.TodasLasFuncionesControl();
+            control.VolverClick += (s, e) =>
+            {
+                if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+                {
+                    PanelContenedor.Controls.Clear();
+                    PanelContenedor.Visible = false;
+                }
+            };
+            MostrarEnPanel(control);
+            if (PanelContenedor != null && !PanelContenedor.IsDisposed)
+            {
+                PanelContenedor.Visible = true;
+            }
+        }
     }
 }

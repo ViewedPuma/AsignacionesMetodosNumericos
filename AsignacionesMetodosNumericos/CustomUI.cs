@@ -111,12 +111,19 @@ namespace AsignacionesMetodosNumericos
                     dataGridView.AllowUserToAddRows = false;
                     dataGridView.AllowUserToDeleteRows = false;
                     dataGridView.AllowUserToResizeRows = false;
+                } else if(control is ComboBox comboBox)
+                {
+                    comboBox.Font = fuenteChica;
+                    comboBox.BackColor = Color.FromArgb(30, 30, 30);
+                    comboBox.ForeColor = Color.White;
+                    comboBox.FlatStyle = FlatStyle.Flat;
+                    comboBox.DropDownStyle = ComboBoxStyle.DropDownList; // Evita la edición del texto
                 }
 
                 // Aplica estilos a controles hijos
                 if (control.HasChildren)
                 {
-                    ApplyStyles(control.Controls,fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
+                    ApplyStyles(control.Controls, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
                 }
             }
         }

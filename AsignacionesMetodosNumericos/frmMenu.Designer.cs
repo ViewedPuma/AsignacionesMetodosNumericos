@@ -33,9 +33,9 @@ namespace AsignacionesMetodosNumericos
             label1 = new Label();
             btnErrorAbsolutoRelativo = new Button();
             btnRaicesDeEcuaciones = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
+            btnNewtonRaphson = new Button();
+            btnSecante = new Button();
+            btnTodosLosMetodos = new Button();
             button7 = new Button();
             button8 = new Button();
             label2 = new Label();
@@ -79,38 +79,38 @@ namespace AsignacionesMetodosNumericos
             btnRaicesDeEcuaciones.UseVisualStyleBackColor = false;
             btnRaicesDeEcuaciones.Click += button3_Click;
             // 
-            // button4
+            // btnNewtonRaphson
             // 
-            button4.BackColor = Color.FromArgb(16, 48, 54);
-            button4.Enabled = false;
-            button4.Location = new Point(916, 245);
-            button4.Name = "button4";
-            button4.Size = new Size(207, 138);
-            button4.TabIndex = 4;
-            button4.Text = "Coming Soon";
-            button4.UseVisualStyleBackColor = false;
+            btnNewtonRaphson.BackColor = Color.FromArgb(16, 48, 54);
+            btnNewtonRaphson.Location = new Point(916, 245);
+            btnNewtonRaphson.Name = "btnNewtonRaphson";
+            btnNewtonRaphson.Size = new Size(207, 138);
+            btnNewtonRaphson.TabIndex = 4;
+            btnNewtonRaphson.Text = "NewtonRaphson";
+            btnNewtonRaphson.UseVisualStyleBackColor = false;
+            btnNewtonRaphson.Click += btnNewtonRaphson_Click;
             // 
-            // button5
+            // btnSecante
             // 
-            button5.BackColor = Color.FromArgb(16, 48, 54);
-            button5.Enabled = false;
-            button5.Location = new Point(160, 444);
-            button5.Name = "button5";
-            button5.Size = new Size(207, 138);
-            button5.TabIndex = 5;
-            button5.Text = "Coming Soon";
-            button5.UseVisualStyleBackColor = false;
+            btnSecante.BackColor = Color.FromArgb(16, 48, 54);
+            btnSecante.Location = new Point(160, 444);
+            btnSecante.Name = "btnSecante";
+            btnSecante.Size = new Size(207, 138);
+            btnSecante.TabIndex = 5;
+            btnSecante.Text = "Secante";
+            btnSecante.UseVisualStyleBackColor = false;
+            btnSecante.Click += btnSecante_Click;
             // 
-            // button6
+            // btnTodosLosMetodos
             // 
-            button6.BackColor = Color.FromArgb(16, 48, 54);
-            button6.Enabled = false;
-            button6.Location = new Point(416, 444);
-            button6.Name = "button6";
-            button6.Size = new Size(207, 138);
-            button6.TabIndex = 6;
-            button6.Text = "Coming Soon";
-            button6.UseVisualStyleBackColor = false;
+            btnTodosLosMetodos.BackColor = Color.FromArgb(16, 48, 54);
+            btnTodosLosMetodos.Location = new Point(416, 444);
+            btnTodosLosMetodos.Name = "btnTodosLosMetodos";
+            btnTodosLosMetodos.Size = new Size(207, 138);
+            btnTodosLosMetodos.TabIndex = 6;
+            btnTodosLosMetodos.Text = "Todos los metodos";
+            btnTodosLosMetodos.UseVisualStyleBackColor = false;
+            btnTodosLosMetodos.Click += btnTodosLosMetodos_Click;
             // 
             // button7
             // 
@@ -192,9 +192,9 @@ namespace AsignacionesMetodosNumericos
             Controls.Add(label3);
             Controls.Add(button8);
             Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(btnTodosLosMetodos);
+            Controls.Add(btnSecante);
+            Controls.Add(btnNewtonRaphson);
             Controls.Add(btnRaicesDeEcuaciones);
             Controls.Add(btnErrorAbsolutoRelativo);
             Controls.Add(label1);
@@ -229,9 +229,9 @@ namespace AsignacionesMetodosNumericos
         private Button btnAsignacion02;
         private Button btnErrorAbsolutoRelativo;
         private Button btnRaicesDeEcuaciones;
-        private Button button4;
-        private Button button5;
-        private Button button6;
+        private Button btnNewtonRaphson;
+        private Button btnSecante;
+        private Button btnTodosLosMetodos;
         private Button button7;
         private Button button8;
         private Label label2;

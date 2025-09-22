@@ -151,5 +151,10 @@ namespace AsignacionesMetodosNumericos.RaicesFunciones.implementaciones
             txtEjemplo.BackColor = this.BackColor;
             txtEjemplo.TabStop = false;
         }
+
+        private void txtEjemplo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
