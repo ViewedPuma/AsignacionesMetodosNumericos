@@ -36,13 +36,13 @@ namespace AsignacionesMetodosNumericos
             btnNewtonRaphson = new Button();
             btnSecante = new Button();
             btnTodosLosMetodos = new Button();
-            button7 = new Button();
-            button8 = new Button();
             label2 = new Label();
             label3 = new Label();
             label5 = new Label();
             btnAsignacion02 = new Button();
             PanelContenedor = new Panel();
+            button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -66,6 +66,7 @@ namespace AsignacionesMetodosNumericos
             btnErrorAbsolutoRelativo.TabIndex = 2;
             btnErrorAbsolutoRelativo.Text = "Error A y R";
             btnErrorAbsolutoRelativo.UseVisualStyleBackColor = false;
+            btnErrorAbsolutoRelativo.Visible = false;
             btnErrorAbsolutoRelativo.Click += btnErrorAbsolutoRelativo_Click;
             // 
             // btnRaicesDeEcuaciones
@@ -77,6 +78,7 @@ namespace AsignacionesMetodosNumericos
             btnRaicesDeEcuaciones.TabIndex = 3;
             btnRaicesDeEcuaciones.Text = "Raices de Ecuaciones";
             btnRaicesDeEcuaciones.UseVisualStyleBackColor = false;
+            btnRaicesDeEcuaciones.Visible = false;
             btnRaicesDeEcuaciones.Click += button3_Click;
             // 
             // btnNewtonRaphson
@@ -88,6 +90,7 @@ namespace AsignacionesMetodosNumericos
             btnNewtonRaphson.TabIndex = 4;
             btnNewtonRaphson.Text = "NewtonRaphson";
             btnNewtonRaphson.UseVisualStyleBackColor = false;
+            btnNewtonRaphson.Visible = false;
             btnNewtonRaphson.Click += btnNewtonRaphson_Click;
             // 
             // btnSecante
@@ -99,6 +102,7 @@ namespace AsignacionesMetodosNumericos
             btnSecante.TabIndex = 5;
             btnSecante.Text = "Secante";
             btnSecante.UseVisualStyleBackColor = false;
+            btnSecante.Visible = false;
             btnSecante.Click += btnSecante_Click;
             // 
             // btnTodosLosMetodos
@@ -110,29 +114,8 @@ namespace AsignacionesMetodosNumericos
             btnTodosLosMetodos.TabIndex = 6;
             btnTodosLosMetodos.Text = "Todos los metodos";
             btnTodosLosMetodos.UseVisualStyleBackColor = false;
+            btnTodosLosMetodos.Visible = false;
             btnTodosLosMetodos.Click += btnTodosLosMetodos_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(16, 48, 54);
-            button7.Enabled = false;
-            button7.Location = new Point(916, 444);
-            button7.Name = "button7";
-            button7.Size = new Size(207, 138);
-            button7.TabIndex = 7;
-            button7.Text = "Coming Soon";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.FromArgb(16, 48, 54);
-            button8.Enabled = false;
-            button8.Location = new Point(667, 444);
-            button8.Name = "button8";
-            button8.Size = new Size(207, 138);
-            button8.TabIndex = 8;
-            button8.Text = "Coming Soon";
-            button8.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -168,17 +151,39 @@ namespace AsignacionesMetodosNumericos
             btnAsignacion02.TabIndex = 13;
             btnAsignacion02.Text = "Asignacion02";
             btnAsignacion02.UseVisualStyleBackColor = false;
+            btnAsignacion02.Visible = false;
             btnAsignacion02.Click += button1_Click_1;
             // 
             // PanelContenedor
             // 
-            PanelContenedor.Dock = DockStyle.Fill;
-            PanelContenedor.Location = new Point(0, 0);
+            PanelContenedor.Location = new Point(1104, 685);
             PanelContenedor.Name = "PanelContenedor";
-            PanelContenedor.Size = new Size(1262, 815);
+            PanelContenedor.Size = new Size(79, 130);
             PanelContenedor.TabIndex = 14;
             PanelContenedor.Visible = false;
             PanelContenedor.Paint += PanelAsignacion2_Paint;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(16, 48, 54);
+            button2.Enabled = false;
+            button2.Location = new Point(667, 444);
+            button2.Name = "button2";
+            button2.Size = new Size(207, 138);
+            button2.TabIndex = 16;
+            button2.Text = "Coming Soon";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(16, 48, 54);
+            button3.Enabled = false;
+            button3.Location = new Point(916, 444);
+            button3.Name = "button3";
+            button3.Size = new Size(207, 138);
+            button3.TabIndex = 17;
+            button3.Text = "Coming Soon";
+            button3.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
@@ -186,12 +191,12 @@ namespace AsignacionesMetodosNumericos
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 77, 86);
             ClientSize = new Size(1262, 815);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(PanelContenedor);
             Controls.Add(btnAsignacion02);
             Controls.Add(label5);
             Controls.Add(label3);
-            Controls.Add(button8);
-            Controls.Add(button7);
             Controls.Add(btnTodosLosMetodos);
             Controls.Add(btnSecante);
             Controls.Add(btnNewtonRaphson);
@@ -232,11 +237,11 @@ namespace AsignacionesMetodosNumericos
         private Button btnNewtonRaphson;
         private Button btnSecante;
         private Button btnTodosLosMetodos;
-        private Button button7;
-        private Button button8;
         private Label label2;
         private Label label3;
         private Label label5;
         private Panel PanelContenedor;
+        private Button button2;
+        private Button button3;
     }
 }
