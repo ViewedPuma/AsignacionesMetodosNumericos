@@ -54,6 +54,9 @@
             txtResultadoX2 = new TextBox();
             txtResultadoX3 = new TextBox();
             cmbMetodo = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -296,11 +299,44 @@
             cmbMetodo.Size = new Size(305, 23);
             cmbMetodo.TabIndex = 115;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(598, 391);
+            label1.Name = "label1";
+            label1.Size = new Size(20, 15);
+            label1.TabIndex = 116;
+            label1.Tag = "chico";
+            label1.Text = "X1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(598, 548);
+            label2.Name = "label2";
+            label2.Size = new Size(20, 15);
+            label2.TabIndex = 117;
+            label2.Tag = "chico";
+            label2.Text = "X2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(598, 710);
+            label3.Name = "label3";
+            label3.Size = new Size(20, 15);
+            label3.TabIndex = 118;
+            label3.Tag = "chico";
+            label3.Text = "X3";
+            // 
             // Asignacion07Control
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(24, 77, 86);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(cmbMetodo);
             Controls.Add(txtResultadoX3);
             Controls.Add(txtResultadoX2);
@@ -353,5 +389,8 @@
         private TextBox txtX11;
         private TextBox txtResultadoX3;
         private ComboBox cmbMetodo;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
