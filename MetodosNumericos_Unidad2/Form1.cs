@@ -1,5 +1,6 @@
 using AsignacionesMetodosNumericos;
 using MetodosNumericos_Unidad2.Asignacion07;
+using MetodosNumericos_Unidad2.Meotodo_Gauss_Seidel;
 
 namespace MetodosNumericos_Unidad2
 {
@@ -38,6 +39,18 @@ namespace MetodosNumericos_Unidad2
         private void btnAsignacion07_Click(object sender, EventArgs e)
         {
             var control = new Asignacion07Control();
+            control.VolverClick += (s, e) =>
+            {
+                PanelContenedor.Controls.Clear();
+                PanelContenedor.Visible = false;
+            };
+            MostrarEnPanel(control);
+            PanelContenedor.Visible = true;
+        }
+
+        private void btnGaussSeidel_Click(object sender, EventArgs e)
+        {
+            var control = new GaussSeidelControl();
             control.VolverClick += (s, e) =>
             {
                 PanelContenedor.Controls.Clear();

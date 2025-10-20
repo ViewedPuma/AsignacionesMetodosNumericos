@@ -19,6 +19,7 @@ namespace AsignacionesMetodosNumericos
             // Carga la fuente una sola vez
             PrivateFontCollection fuentes = new PrivateFontCollection();
             fuentes.AddFontFile("Resources/fonts/ttf/Jaro-Regular.ttf");
+            Font fuentemini = new Font(fuentes.Families[0], 8);
             Font fuenteNormal = new Font(fuentes.Families[0], 12);
             Font fuenteChica = new Font(fuentes.Families[0], 24);
             Font fuenteMediana = new Font(fuentes.Families[0], 48);
@@ -27,7 +28,7 @@ namespace AsignacionesMetodosNumericos
 
 
             // Aplica estilos a todos los controles, incluyendo los anidados
-            ApplyStyles(control.Controls, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
+            ApplyStyles(control.Controls,fuentemini, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
 
 
         }
@@ -36,7 +37,7 @@ namespace AsignacionesMetodosNumericos
         {
             LoadDefaultStyles((Control)form);
         }
-        private static void ApplyStyles(Control.ControlCollection controls,Font fuenteNormal, Font fuenteChica, Font fuenteMediana, Font fuenteGrande)
+        private static void ApplyStyles(Control.ControlCollection controls,Font fuentemini,Font fuenteNormal, Font fuenteChica, Font fuenteMediana, Font fuenteGrande)
         {
             foreach (Control control in controls)
             {
@@ -118,12 +119,34 @@ namespace AsignacionesMetodosNumericos
                     comboBox.ForeColor = Color.White;
                     comboBox.FlatStyle = FlatStyle.Flat;
                     comboBox.DropDownStyle = ComboBoxStyle.DropDownList; // Evita la edición del texto
+                } else if(control is NumericUpDown numericUpDown)
+                {
+                    // Allow manual sizing; otherwise height is locked by the control
+                    numericUpDown.AutoSize = false;
+
+                    // Font according to Tag
+                    if (numericUpDown.Tag != null && numericUpDown.Tag.ToString() == "mini")
+                        numericUpDown.Font = fuentemini;
+                    else
+                        numericUpDown.Font = fuenteNormal;
+
+                    numericUpDown.BackColor = Color.FromArgb(30, 30, 30);
+                    numericUpDown.ForeColor = Color.White;
+
+                    // Make sure the height fits the chosen font (avoid clipped digits)
+                    // Font.Height is the line spacing; add a small padding for borders
+                    var desiredHeight = numericUpDown.Font.Height + 8;
+                    if (numericUpDown.Height < desiredHeight)
+                        numericUpDown.Height = desiredHeight;
+
+                        numericUpDown.Font = new Font("Segoe UI", (numericUpDown.Tag?.ToString() == "mini") ? 9f : 10f);
+                        numericUpDown.Height = Math.Max(numericUpDown.Height, numericUpDown.Font.Height + 8);
                 }
 
                 // Aplica estilos a controles hijos
                 if (control.HasChildren)
                 {
-                    ApplyStyles(control.Controls, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
+                    ApplyStyles(control.Controls, fuentemini, fuenteNormal, fuenteChica, fuenteMediana, fuenteGrande);
                 }
             }
         }

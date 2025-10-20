@@ -70,6 +70,7 @@ namespace MetodosNumericos_Unidad2.Asignacion07
 
                 // Determinar el método elegido
                 string metodo = cmbMetodo.SelectedItem?.ToString() ?? "";
+
                 double[] respuesta = null;
 
                 if (metodo == "Gauss")
